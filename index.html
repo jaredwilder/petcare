@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRS Dashboard: Project PetCarePro</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        // Customizing Tailwind's default configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            primary: '#4f46e5', // A vibrant indigo
+                            secondary: '#10b981', // A friendly emerald
+                            light: '#eef2ff', // Light background for highlights
+                            dark: '#1e1b4b' // Deep navy for text
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* A little extra CSS for polish */
+        body {
+            background-color: #f8fafc; /* A very light gray background */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-brand-dark">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+            <div>
+                <h1 class="text-4xl font-extrabold text-brand-dark">Project PetCarePro</h1>
+                <p class="text-lg text-slate-500">Software Requirements Specification</p>
+            </div>
+            <div class="mt-4 md:mt-0 text-right">
+                <span class="inline-block bg-brand-primary text-white text-xs font-bold mr-2 px-2.5 py-0.5 rounded-full">Version 1.0</span>
+                <span class="inline-block bg-brand-secondary text-white text-xs font-bold mr-2 px-2.5 py-0.5 rounded-full">Status: In Review</span>
+            </div>
+        </header>
+
+        <div class="card">
+            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                1. Introduction
+            </h2>
+            <p class="text-slate-600">
+                This document outlines the requirements for <b>Project PetCarePro</b>, a unified web platform designed to replace the two existing company websites. The new platform will serve as the primary digital asset for informing potential franchisees, educating pet parents, and generating qualified business leads.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-brand-primary" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                </svg>
+                2. User Personas
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-brand-light p-4 rounded-lg border border-indigo-200">
+                    <h3 class="font-bold text-lg text-brand-dark">Prospective Franchisee</h3>
+                    <p class="text-sm text-slate-600">An entrepreneur evaluating the franchise opportunity. Needs clear info on investment, support, and an easy way to inquire.</p>
+                </div>
+                <div class="bg-brand-light p-4 rounded-lg border border-indigo-200">
+                    <h3 class="font-bold text-lg text-brand-dark">Pet Parent</h3>
+                    <p class="text-sm text-slate-600">A customer looking for local services, hours, and community content like events and photos.</p>
+                </div>
+                <div class="bg-brand-light p-4 rounded-lg border border-indigo-200">
+                    <h3 class="font-bold text-lg text-brand-dark">Franchisee (Editor)</h3>
+                    <p class="text-sm text-slate-600">An owner who needs to log in and easily update their specific location's page with local news and events.</p>
+                </div>
+                <div class="bg-brand-light p-4 rounded-lg border border-indigo-200">
+                    <h3 class="font-bold text-lg text-brand-dark">System Administrator</h3>
+                    <p class="text-sm text-slate-600">A technical user with full control to manage users, settings, and integrations across the entire site.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+             <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                3. Specific Requirements
+            </h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-lg font-semibold text-brand-dark mb-2">3.1 Functional Requirements</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start"><span class="text-brand-secondary mr-3 mt-1">&#10003;</span><span><b>User Roles:</b> Granular permissions for Admins, Corporate, and Franchisees.</span></li>
+                        <li class="flex items-start"><span class="text-brand-secondary mr-3 mt-1">&#10003;</span><span><b>Dynamic Content:</b> Easy creation of Locations, Events, Contests, and Galleries.</span></li>
+                        <li class="flex items-start"><span class="text-brand-secondary mr-3 mt-1">&#10003;</span><span><b>Lead Generation:</b> Dedicated forms for franchise inquiries and customer contact.</span></li>
+                        <li class="flex items-start"><span class="text-brand-secondary mr-3 mt-1">&#10003;</span><span><b>SEO:</b> Auto XML sitemaps, customizable meta fields, and clean URLs.</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-brand-dark mb-2">3.2 Non-Functional Requirements</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start"><span class="text-brand-secondary mr-3 mt-1">&#10003;</span><span><b>Performance:</b> Target Google PageSpeed score of 85+ on all devices.</span></li>
+                        <li class="flex items-start"><span class="text-brand-secondary mr-3 mt-1">&#10003;</span><span><b>Usability:</b> Minimalist, modern, mobile-first responsive design.</span></li>
+                        <li class="flex items-start"><span class="text-brand-secondary mr-3 mt-1">&#10003;</span><span><b>Security:</b> Full HTTPS encryption and protection against common vulnerabilities.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="card mb-0">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                    </svg>
+                    Appendix A: Sitemap
+                </h2>
+                <ul class="text-slate-600 list-disc list-inside space-y-1">
+                    <li><b>Home</b></li>
+                    <li><b>Franchise Opportunities</b>
+                        <ul class="pl-6 list-[circle] list-inside">
+                            <li>Why Us?</li>
+                            <li>The Investment</li>
+                            <li>Request Info</li>
+                        </ul>
+                    </li>
+                    <li><b>Our Services</b></li>
+                    <li><b>Find a Location</b></li>
+                    <li><b>Community</b>
+                        <ul class="pl-6 list-[circle] list-inside">
+                            <li>Blog / Resources</li>
+                            <li>Events</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card mb-0">
+                 <h2 class="text-2xl font-bold mb-4 flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                    Appendix B: Competitive Analysis
+                </h2>
+                <p class="text-slate-600 text-sm">A brief look at the market to identify opportunities for differentiation.</p>
+                <div class="mt-4 flow-root">
+                    <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                        <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                            <table class="min-w-full divide-y divide-slate-300">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-brand-dark sm:pl-0">Competitor</th>
+                                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-brand-dark">Key Takeaway</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-200">
+                                    <tr>
+                                        <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-brand-dark sm:pl-0">Dogtopia</td>
+                                        <td class="whitespace-nowrap px-3 py-4 text-sm text-slate-500">Need to clarify our franchise path.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-brand-dark sm:pl-0">Camp Bow Wow</td>
+                                        <td class="whitespace-nowrap px-3 py-4 text-sm text-slate-500">A modern design is our key differentiator.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
